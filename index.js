@@ -1,8 +1,16 @@
-for (let index = 0; index < 5; index++) {
-  setTimeout(
-    () => {
-      console.log(index);
-    },
-    (index + 1) * 1000,
-  );
+function countdown(s, cb) {
+  if (s === 0) {
+    cb();
+    return;
+  }
+
+  console.log(s);
+
+  setTimeout(() => {
+    countdown(s - 1, cb);
+  }, 1000);
 }
+
+countdown(5, () => {
+  console.log('Yeay!');
+});
