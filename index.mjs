@@ -12,5 +12,5 @@ function countdown(s, cb) {
 }
 
 countdown(5, () => {
-  console.log('Yeay!');
+  console.log("Yeay!");
 });
